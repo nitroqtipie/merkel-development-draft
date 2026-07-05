@@ -67,8 +67,12 @@ export default function ProcessSection() {
       className="
       bg-[#080808]
       text-white
-      px-8
-      py-24
+
+      px-6
+      md:px-8
+
+      py-20
+      md:py-24
       "
     >
 
@@ -76,16 +80,31 @@ export default function ProcessSection() {
       <div className="max-w-7xl mx-auto">
 
 
+
+
+
         {/* HEADER */}
 
-        <div className="mb-16 max-w-3xl">
+        <div
+          className="
+          mb-14
+          md:mb-16
+
+          max-w-3xl
+          "
+        >
 
 
           <p
             className="
             text-[#C5A059]
-            tracking-[0.4em]
-            text-sm
+
+            tracking-[0.35em]
+            md:tracking-[0.4em]
+
+            text-xs
+            md:text-sm
+
             mb-6
             "
           >
@@ -97,16 +116,23 @@ export default function ProcessSection() {
 
 
 
+
+
           <h2
             className="
             font-serif
-            text-5xl
+
+            text-4xl
+            md:text-5xl
+
             leading-tight
+
             mb-8
             "
           >
 
             The Honest Build. <br />
+
             From Vision to Reality.
 
           </h2>
@@ -114,9 +140,13 @@ export default function ProcessSection() {
 
 
 
+
+
+
           <p
             className="
             text-gray-400
+
             leading-8
             "
           >
@@ -136,15 +166,23 @@ export default function ProcessSection() {
 
 
 
+
+
         {/* PROCESS CARDS */}
 
         <div
           className="
           grid
-          grid-cols-5
-          gap-8
+
+          grid-cols-1
+          md:grid-cols-5
+
+          gap-12
+          md:gap-8
           "
         >
+
+
 
 
           {steps.map((item,index)=>(
@@ -153,30 +191,46 @@ export default function ProcessSection() {
             <div key={index}>
 
 
+
               <div className="relative overflow-hidden">
+
 
 
                 <img
                   src={item.image}
+
                   className="
-                  h-[500px]
                   w-full
+
+                  h-[420px]
+                  md:h-[500px]
+
                   object-cover
+
                   hover:scale-105
+
                   transition
+
                   duration-700
                   "
                 />
 
 
 
+
+
+
                 <p
                   className="
                   absolute
+
                   top-5
                   left-5
+
                   text-white/60
+
                   text-xs
+
                   tracking-widest
                   "
                 >
@@ -187,7 +241,10 @@ export default function ProcessSection() {
 
 
 
+
               </div>
+
+
 
 
 
@@ -195,8 +252,11 @@ export default function ProcessSection() {
 
               <h3
                 className="
-                mt-8
+                mt-6
+                md:mt-8
+
                 font-serif
+
                 text-2xl
                 "
               >
@@ -209,11 +269,15 @@ export default function ProcessSection() {
 
 
 
+
               <p
                 className="
                 mt-5
+
                 text-gray-500
+
                 leading-7
+
                 text-sm
                 "
               >
@@ -223,16 +287,21 @@ export default function ProcessSection() {
               </p>
 
 
+
+
             </div>
 
 
           ))}
 
 
+
         </div>
 
 
+
       </div>
+
 
 
     </section>

@@ -58,6 +58,7 @@ export default function InvestmentSection() {
 
 
 
+
   return (
 
     <section
@@ -65,8 +66,12 @@ export default function InvestmentSection() {
       className="
       bg-[#F9F7F2]
       text-[#0F0F0F]
-      py-32
-      px-8
+
+      py-20
+      md:py-32
+
+      px-6
+      md:px-8
       "
     >
 
@@ -74,39 +79,94 @@ export default function InvestmentSection() {
       <div className="max-w-7xl mx-auto">
 
 
+
         <motion.div
           initial={{ opacity:0, y:40 }}
           whileInView={{ opacity:1, y:0 }}
           transition={{ duration:1 }}
-          className="max-w-3xl mb-20"
+
+          className="
+          max-w-3xl
+
+          mb-16
+          md:mb-20
+          "
         >
 
 
-          <p className="tracking-[0.3em] text-[#C5A059] text-sm mb-8">
+
+
+          <p
+            className="
+            tracking-[0.3em]
+            text-[#C5A059]
+
+            text-xs
+            md:text-sm
+
+            mb-6
+            md:mb-8
+            "
+          >
+
             — INVESTMENT
+
           </p>
 
 
 
-          <h2 className="font-serif text-6xl leading-tight mb-10">
+
+
+
+          <h2
+            className="
+            font-serif
+
+            text-4xl
+            md:text-6xl
+
+            leading-tight
+
+            mb-8
+            md:mb-10
+            "
+          >
 
             Investing in Quality. <br />
 
+
             <span className="text-[#C5A059]">
+
               Building Long-Term Value.
+
             </span>
+
 
           </h2>
 
 
 
-          <p className="text-gray-600 text-lg leading-8">
+
+
+
+          <p
+            className="
+            text-gray-600
+
+            text-base
+            md:text-lg
+
+            leading-8
+            "
+          >
 
             Merkel Development offers select partnership opportunities
             for investors seeking stable, high-quality exposure to
             Arizona's premier residential market.
 
           </p>
+
+
 
 
         </motion.div>
@@ -116,14 +176,35 @@ export default function InvestmentSection() {
 
 
 
-        <div className="grid md:grid-cols-2 gap-20 items-start">
+
+
+
+        <div
+          className="
+          grid
+
+          grid-cols-1
+          md:grid-cols-2
+
+          gap-14
+          md:gap-20
+
+          items-start
+          "
+        >
+
+
 
 
           <img
             src={investment}
+
             className="
             w-full
-            h-[700px]
+
+            h-[420px]
+            md:h-[700px]
+
             object-cover
             "
           />
@@ -132,16 +213,35 @@ export default function InvestmentSection() {
 
 
 
+
+
           <div>
 
 
-            <div className="grid md:grid-cols-2 gap-14">
+
+
+
+            <div
+              className="
+              grid
+
+              grid-cols-1
+              md:grid-cols-2
+
+              gap-12
+              md:gap-14
+              "
+            >
+
+
+
 
 
               {items.map((item)=> {
 
 
                 const Icon = item.icon;
+
 
 
                 return (
@@ -156,7 +256,15 @@ export default function InvestmentSection() {
 
 
 
-                    <h3 className="font-serif text-2xl mb-4">
+                    <h3
+                      className="
+                      font-serif
+
+                      text-2xl
+
+                      mb-4
+                      "
+                    >
 
                       {item.title}
 
@@ -164,18 +272,32 @@ export default function InvestmentSection() {
 
 
 
-                    <p className="text-gray-600 leading-7">
+
+
+                    <p
+                      className="
+                      text-gray-600
+
+                      leading-7
+                      "
+                    >
 
                       {item.text}
 
                     </p>
 
 
+
+
                   </div>
+
 
                 );
 
+
               })}
+
+
 
 
             </div>
@@ -185,20 +307,42 @@ export default function InvestmentSection() {
 
 
 
+
+
+
+
             <a
               href="#contact"
+
               className="
               inline-block
-              mt-20
+
+              mt-16
+              md:mt-20
+
               bg-[#080808]
+
               text-white
-              px-12
+
+              w-full
+              md:w-auto
+
+              text-center
+
+              px-8
+              md:px-12
+
               py-5
+
               tracking-widest
+
               text-xs
+
               font-semibold
+
               hover:bg-[#C5A059]
               hover:text-black
+
               transition
               "
             >
@@ -206,6 +350,8 @@ export default function InvestmentSection() {
               DISCUSS INVESTMENT OPPORTUNITIES
 
             </a>
+
+
 
 
 

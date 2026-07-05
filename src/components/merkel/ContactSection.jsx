@@ -12,26 +12,37 @@ export default function ContactSection() {
       from-[#353636]
       via-[#252626]
       to-[#111111]
+
       text-white
+
       py-20
-      px-8
+      md:py-20
+
+      px-6
+      md:px-8
       "
     >
+
 
       <div
         className="
         max-w-6xl
         mx-auto
+
         grid
+        grid-cols-1
         md:grid-cols-2
+
         gap-16
         "
       >
 
 
+
         {/* LEFT */}
 
         <div>
+
 
           <p
             className="
@@ -41,132 +52,244 @@ export default function ContactSection() {
             mb-6
             "
           >
+
             — CONNECT
+
           </p>
+
+
+
 
 
           <h2
             className="
             font-serif
-            text-5xl
+
+            text-4xl
+            md:text-5xl
+
             leading-tight
+
             mb-8
             "
           >
 
             Build With <br />
 
+
             <span className="text-[#C5A059]">
+
               Merkel Development.
+
             </span>
 
+
           </h2>
+
+
+
+
 
 
           <p
             className="
             text-gray-400
             leading-7
+
             mb-12
+
             max-w-xl
             "
           >
+
 
             Whether planning a custom residence, exploring a
             development opportunity, or considering investment partnerships —
             connect with our team.
 
+
           </p>
+
+
+
+
 
 
 
           <form className="space-y-7">
 
 
-            <div className="grid grid-cols-2 gap-8">
+
+            <div
+              className="
+              grid
+
+              grid-cols-1
+              md:grid-cols-2
+
+              gap-8
+              "
+            >
+
 
               <input
+                required
                 placeholder="NAME"
                 className="
                 bg-transparent
                 border-b
                 border-white/30
+
                 py-3
+
                 outline-none
+
                 text-sm
                 "
               />
 
 
+
+
               <input
+                required
                 placeholder="EMAIL"
                 className="
                 bg-transparent
                 border-b
                 border-white/30
+
                 py-3
+
                 outline-none
+
                 text-sm
                 "
               />
+
+
 
             </div>
 
 
 
+
+
+
+
             <input
+              required
               placeholder="PHONE"
+
               className="
               w-full
+
               bg-transparent
+
               border-b
               border-white/30
+
               py-3
+
               outline-none
+
               text-sm
               "
             />
+
+
+
+
+
 
 
 
             <textarea
+              required
               placeholder="MESSAGE"
+
               rows="3"
+
               className="
               w-full
+
               bg-transparent
+
               border-b
               border-white/30
+
               py-3
+
               outline-none
+
               text-sm
               "
             />
 
 
 
+
+
+
+
             <button
+              type="submit"
+
+              onClick={(e)=>{
+
+                const form = e.currentTarget.form;
+
+                if(form.checkValidity()){
+
+                  e.preventDefault();
+
+                  alert("Message sent successfully.");
+
+                  form.reset();
+
+                }
+
+              }}
+
               className="
               bg-[#C5A059]
+
               text-black
+
+              w-full
+              md:w-auto
+
               px-10
               py-4
+
               tracking-widest
+
               text-xs
+
               hover:bg-white
+
               transition
               "
             >
 
+
               SEND MESSAGE →
 
+
             </button>
+
+
 
 
           </form>
 
 
+
         </div>
+
+
+
+
 
 
 
@@ -174,55 +297,94 @@ export default function ContactSection() {
 
         {/* RIGHT */}
 
+
         <div
           className="
           flex
           flex-col
+
           justify-center
-          space-y-12
+
+          space-y-10
+          md:space-y-12
           "
         >
 
 
 
+
+
+
           <div className="flex gap-6">
 
-            <MapPin className="text-[#C5A059]" />
+
+            <MapPin className="text-[#C5A059] shrink-0" />
+
 
             <div>
 
+
               <h3 className="text-sm tracking-widest">
+
                 LOCATION
+
               </h3>
 
+
+
               <p className="text-gray-400 mt-3">
+
                 Arcadia • Phoenix, Arizona
+
               </p>
 
+
             </div>
+
 
           </div>
 
 
 
 
+
+
+
+
+
+
           <div className="flex gap-6">
 
-            <Mail className="text-[#C5A059]" />
+
+            <Mail className="text-[#C5A059] shrink-0" />
+
 
             <div>
 
+
               <h3 className="text-sm tracking-widest">
+
                 EMAIL
+
               </h3>
 
-              <p className="text-gray-400 mt-3">
+
+              <p className="text-gray-400 mt-3 break-all">
+
                 merkeldevelopment@gmail.com
+
               </p>
+
 
             </div>
 
+
+
           </div>
+
+
+
+
 
 
 
@@ -230,21 +392,38 @@ export default function ContactSection() {
 
           <div className="flex gap-6">
 
-            <Phone className="text-[#C5A059]" />
+
+            <Phone className="text-[#C5A059] shrink-0" />
+
 
             <div>
 
+
               <h3 className="text-sm tracking-widest">
+
                 PHONE
+
               </h3>
 
+
+
               <p className="text-gray-400 mt-3">
+
                 (602) 555-1234
+
               </p>
+
 
             </div>
 
+
           </div>
+
+
+
+
+
+
 
 
 
@@ -252,23 +431,32 @@ export default function ContactSection() {
             className="
             border-t
             border-white/10
+
             pt-10
+
             italic
+
             text-gray-500
+
             font-serif
             "
           >
 
+
             "Every home we build is a promise kept."
 
+
           </div>
+
 
 
 
         </div>
 
 
+
       </div>
+
 
 
     </section>

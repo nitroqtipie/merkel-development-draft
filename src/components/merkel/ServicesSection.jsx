@@ -39,23 +39,34 @@ export default function ServicesSection() {
       id="services"
       className="
       relative
+
       min-h-screen
+
       text-white
+
       py-20
-      px-8
+
+      px-6
+      md:px-8
+
       overflow-hidden
       "
     >
 
 
 
+
+
       {/* BACKGROUND IMAGE */}
+
       <div
         className="
         absolute
         inset-0
+
         bg-cover
         bg-center
+
         opacity-40
         "
         style={{
@@ -66,12 +77,19 @@ export default function ServicesSection() {
 
 
 
+
+
+
+
       {/* LEFT TO RIGHT LUXURY FADE */}
+
       <div
         className="
         absolute
         inset-0
+
         bg-gradient-to-r
+
         from-black/90
         via-black/65
         to-black/35
@@ -81,12 +99,18 @@ export default function ServicesSection() {
 
 
 
+
+
+
       {/* BOTTOM CINEMATIC FADE */}
+
       <div
         className="
         absolute
         inset-0
+
         bg-gradient-to-t
+
         from-black/80
         via-transparent
         to-transparent
@@ -97,22 +121,37 @@ export default function ServicesSection() {
 
 
 
+
+
+
+
       <div
         className="
         relative
+
         z-10
+
         max-w-7xl
+
         mx-auto
         "
       >
 
 
 
+
+
+
+
+
         <p
           className="
           text-[#C5A059]
+
           tracking-[0.35em]
+
           text-xs
+
           mb-6
           "
         >
@@ -125,22 +164,39 @@ export default function ServicesSection() {
 
 
 
+
+
+
+
+
         <h2
           className="
           font-serif
-          text-5xl
+
+          text-4xl
+          md:text-5xl
+
           leading-tight
-          mb-20
+
+          mb-14
+          md:mb-20
           "
         >
 
           Comprehensive Expertise. <br />
 
+
           <span className="text-[#C5A059]">
+
             Singular Vision.
+
           </span>
 
+
         </h2>
+
+
+
 
 
 
@@ -150,25 +206,39 @@ export default function ServicesSection() {
         {services.map((item,index)=>(
 
 
+
           <div
             key={index}
+
             className="
             grid
-            grid-cols-12
-            gap-10
+
+            grid-cols-1
+            md:grid-cols-12
+
+            gap-5
+            md:gap-10
+
             border-t
             border-white/20
-            py-12
+
+            py-10
+            md:py-12
             "
           >
 
 
 
+
+
             <p
               className="
-              col-span-1
+              md:col-span-1
+
               text-[#C5A059]
+
               font-serif
+
               text-lg
               "
             >
@@ -181,10 +251,15 @@ export default function ServicesSection() {
 
 
 
+
+
+
             <h3
               className="
-              col-span-5
+              md:col-span-5
+
               font-serif
+
               text-2xl
               "
             >
@@ -197,10 +272,16 @@ export default function ServicesSection() {
 
 
 
+
+
+
+
             <p
               className="
-              col-span-6
+              md:col-span-6
+
               text-gray-300
+
               leading-7
               "
             >
@@ -211,13 +292,16 @@ export default function ServicesSection() {
 
 
 
+
           </div>
 
 
         ))}
 
 
+
       </div>
+
 
 
     </section>
