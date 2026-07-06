@@ -27,7 +27,9 @@ export default function HeroSection() {
 
 
 
+
       {/* LEFT TO RIGHT GRADIENT */}
+
       <div
         className="
         absolute
@@ -45,7 +47,9 @@ export default function HeroSection() {
 
 
 
+
       {/* BOTTOM CINEMATIC FADE */}
+
       <div
         className="
         absolute
@@ -66,6 +70,9 @@ export default function HeroSection() {
 
 
 
+
+      {/* CONTENT */}
+
       <div
         className="
         relative
@@ -74,6 +81,8 @@ export default function HeroSection() {
         max-w-5xl
         "
       >
+
+
 
 
 
@@ -96,6 +105,7 @@ export default function HeroSection() {
           Arcadia • Phoenix, Arizona
 
         </p>
+
 
 
 
@@ -132,6 +142,7 @@ export default function HeroSection() {
 
 
 
+
         <p
           className="
           mt-8
@@ -148,6 +159,7 @@ export default function HeroSection() {
           Luxury Homes Shaped by Purpose
 
         </p>
+
 
 
 
@@ -183,6 +195,7 @@ export default function HeroSection() {
 
 
 
+
         {/* BUTTONS */}
 
         <div
@@ -200,15 +213,21 @@ export default function HeroSection() {
 
 
 
+
+
+
+          {/* PRIMARY INVESTMENT */}
+
           <a
-            href="#contact"
+            href="#investment"
+
             className="
             bg-[#C5A059]
 
             text-black
 
-            px-8
-            md:px-10
+            px-10
+            md:px-14
 
             py-4
 
@@ -227,7 +246,7 @@ export default function HeroSection() {
             "
           >
 
-            BUILD WITH US
+            EXPLORE INVESTMENT OPPORTUNITIES
 
           </a>
 
@@ -238,8 +257,13 @@ export default function HeroSection() {
 
 
 
+
+
+          {/* SECONDARY CONTACT */}
+
           <a
-            href="#investment"
+            href="#contact"
+
             className="
             border
             border-white/40
@@ -267,9 +291,11 @@ export default function HeroSection() {
             "
           >
 
-            EXPLORE INVESTMENT OPPORTUNITIES
+            BUILD WITH US
 
           </a>
+
+
 
 
 

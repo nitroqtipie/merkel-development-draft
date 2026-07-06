@@ -11,13 +11,7 @@ export default function Navbar() {
   useEffect(() => {
 
     const handleScroll = () => {
-
-      if (window.scrollY > 80) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
+      setScrolled(window.scrollY > 80);
     };
 
 
@@ -27,8 +21,8 @@ export default function Navbar() {
     return () =>
       window.removeEventListener("scroll", handleScroll);
 
-
   }, []);
+
 
 
 
@@ -56,15 +50,16 @@ export default function Navbar() {
       left-0
 
       w-full
+
       z-50
 
       transition-all
-      duration-500
+      duration-700
 
 
       ${
         scrolled || open
-        ? "bg-[#151515]/95 backdrop-blur border-b border-white/10"
+        ? "bg-[#111111]/95 backdrop-blur-md"
         : "bg-transparent"
       }
 
@@ -75,19 +70,22 @@ export default function Navbar() {
 
       <div
         className="
+        relative
+
         max-w-7xl
         mx-auto
 
         px-6
         md:px-8
 
-        py-1
+        h-16
 
         flex
-        justify-between
         items-center
+        justify-between
         "
       >
+
 
 
 
@@ -100,6 +98,15 @@ export default function Navbar() {
           href="#"
 
           className="
+          absolute
+
+          left-6
+          md:left-8
+
+          top-1/2
+
+          -translate-y-[42%]
+
           flex
           items-center
           "
@@ -112,10 +119,11 @@ export default function Navbar() {
             alt="Merkel Development Logo"
 
             className="
-            h-12
-            md:h-14
+            h-20
+            md:h-24
 
             w-auto
+
             object-contain
             "
           />
@@ -131,12 +139,35 @@ export default function Navbar() {
 
 
 
+
+
+        <div></div>
+
+
+
+
+
+
+
+
+
+
         {/* DESKTOP MENU */}
 
-        <div className="hidden md:flex gap-12">
+        <div
+          className="
+          hidden
+          md:flex
+
+          gap-12
+
+          ml-auto
+          "
+        >
 
 
           {links.map((link)=>(
+
 
             <a
 
@@ -159,9 +190,12 @@ export default function Navbar() {
               "
             >
 
+
               {link.name}
 
+
             </a>
+
 
           ))}
 
@@ -177,25 +211,23 @@ export default function Navbar() {
 
 
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE */}
 
         <button
           onClick={()=>setOpen(!open)}
 
           className="
           md:hidden
+
           text-white
+
+          ml-auto
           "
         >
 
-
-          {open ? <X size={26}/> : <Menu size={26}/>}
-
+          {open ? <X size={28}/> : <Menu size={28}/>}
 
         </button>
-
-
-
 
 
       </div>
@@ -208,19 +240,16 @@ export default function Navbar() {
 
 
 
-
-
-      {/* MOBILE MENU */}
-
       {open && (
 
         <div
           className="
           md:hidden
 
-          bg-[#151515]/95
+          bg-[#111111]/95
 
           px-6
+
           py-6
 
           space-y-6
@@ -247,10 +276,6 @@ export default function Navbar() {
               tracking-widest
 
               text-white
-
-              hover:text-[#C5A059]
-
-              transition
               "
             >
 
@@ -263,7 +288,6 @@ export default function Navbar() {
 
 
         </div>
-
 
       )}
 
