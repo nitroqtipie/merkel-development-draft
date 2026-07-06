@@ -33,6 +33,7 @@ export default function ServicesSection() {
 
 
 
+
   return (
 
     <section
@@ -56,7 +57,6 @@ export default function ServicesSection() {
 
 
 
-
       {/* BACKGROUND IMAGE */}
 
       <div
@@ -67,7 +67,7 @@ export default function ServicesSection() {
         bg-cover
         bg-center
 
-        opacity-40
+        opacity-50
         "
         style={{
           backgroundImage: `url(${servicesBg})`
@@ -80,8 +80,7 @@ export default function ServicesSection() {
 
 
 
-
-      {/* LEFT TO RIGHT LUXURY FADE */}
+      {/* SOFTER DARK FADE */}
 
       <div
         className="
@@ -90,9 +89,9 @@ export default function ServicesSection() {
 
         bg-gradient-to-r
 
-        from-black/90
-        via-black/65
-        to-black/35
+        from-[#1A1A1A]/85
+        via-[#1A1A1A]/55
+        to-[#1A1A1A]/25
         "
       ></div>
 
@@ -102,7 +101,8 @@ export default function ServicesSection() {
 
 
 
-      {/* BOTTOM CINEMATIC FADE */}
+
+      {/* SOFT BOTTOM DEPTH */}
 
       <div
         className="
@@ -111,7 +111,7 @@ export default function ServicesSection() {
 
         bg-gradient-to-t
 
-        from-black/80
+        from-[#151515]/70
         via-transparent
         to-transparent
         "
@@ -168,7 +168,6 @@ export default function ServicesSection() {
 
 
 
-
         <h2
           className="
           font-serif
@@ -203,8 +202,8 @@ export default function ServicesSection() {
 
 
 
-        {services.map((item,index)=>(
 
+        {services.map((item,index)=>(
 
 
           <div
@@ -280,7 +279,7 @@ export default function ServicesSection() {
               className="
               md:col-span-6
 
-              text-gray-300
+              text-gray-200
 
               leading-7
               "

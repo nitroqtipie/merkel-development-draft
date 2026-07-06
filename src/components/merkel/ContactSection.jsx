@@ -8,15 +8,13 @@ export default function ContactSection() {
     <section
       id="contact"
       className="
-      bg-gradient-to-r
-      from-[#353636]
-      via-[#252626]
-      to-[#111111]
+      relative
+      overflow-hidden
 
-      text-white
+      bg-[#F9F7F2]
+      text-[#111111]
 
       py-20
-      md:py-20
 
       px-6
       md:px-8
@@ -24,8 +22,28 @@ export default function ContactSection() {
     >
 
 
+      {/* GOLD RIGHT FADE */}
       <div
         className="
+        absolute
+        inset-0
+
+        bg-gradient-to-l
+        from-[#C5A059]/25
+        via-[#F9F7F2]/60
+        to-transparent
+
+        pointer-events-none
+        "
+      ></div>
+
+
+
+      <div
+        className="
+        relative
+        z-10
+
         max-w-6xl
         mx-auto
 
@@ -59,8 +77,6 @@ export default function ContactSection() {
 
 
 
-
-
           <h2
             className="
             font-serif
@@ -76,13 +92,11 @@ export default function ContactSection() {
 
             Build With <br />
 
-
             <span className="text-[#C5A059]">
 
               Merkel Development.
 
             </span>
-
 
           </h2>
 
@@ -90,10 +104,9 @@ export default function ContactSection() {
 
 
 
-
           <p
             className="
-            text-gray-400
+            text-gray-600
             leading-7
 
             mb-12
@@ -102,14 +115,11 @@ export default function ContactSection() {
             "
           >
 
-
             Whether planning a custom residence, exploring a
             development opportunity, or considering investment partnerships —
             connect with our team.
 
-
           </p>
-
 
 
 
@@ -123,7 +133,6 @@ export default function ContactSection() {
             <div
               className="
               grid
-
               grid-cols-1
               md:grid-cols-2
 
@@ -137,8 +146,9 @@ export default function ContactSection() {
                 placeholder="NAME"
                 className="
                 bg-transparent
+
                 border-b
-                border-white/30
+                border-black/30
 
                 py-3
 
@@ -147,7 +157,6 @@ export default function ContactSection() {
                 text-sm
                 "
               />
-
 
 
 
@@ -156,8 +165,9 @@ export default function ContactSection() {
                 placeholder="EMAIL"
                 className="
                 bg-transparent
+
                 border-b
-                border-white/30
+                border-black/30
 
                 py-3
 
@@ -168,10 +178,7 @@ export default function ContactSection() {
               />
 
 
-
             </div>
-
-
 
 
 
@@ -187,7 +194,7 @@ export default function ContactSection() {
               bg-transparent
 
               border-b
-              border-white/30
+              border-black/30
 
               py-3
 
@@ -196,8 +203,6 @@ export default function ContactSection() {
               text-sm
               "
             />
-
-
 
 
 
@@ -216,7 +221,7 @@ export default function ContactSection() {
               bg-transparent
 
               border-b
-              border-white/30
+              border-black/30
 
               py-3
 
@@ -266,7 +271,8 @@ export default function ContactSection() {
 
               text-xs
 
-              hover:bg-white
+              hover:bg-[#111111]
+              hover:text-white
 
               transition
               "
@@ -280,12 +286,13 @@ export default function ContactSection() {
 
 
 
-
           </form>
 
 
 
         </div>
+
+
 
 
 
@@ -305,11 +312,9 @@ export default function ContactSection() {
 
           justify-center
 
-          space-y-10
-          md:space-y-12
+          space-y-12
           "
         >
-
 
 
 
@@ -323,7 +328,6 @@ export default function ContactSection() {
 
             <div>
 
-
               <h3 className="text-sm tracking-widest">
 
                 LOCATION
@@ -331,8 +335,7 @@ export default function ContactSection() {
               </h3>
 
 
-
-              <p className="text-gray-400 mt-3">
+              <p className="text-gray-600 mt-3">
 
                 Arcadia • Phoenix, Arizona
 
@@ -343,8 +346,6 @@ export default function ContactSection() {
 
 
           </div>
-
-
 
 
 
@@ -369,15 +370,14 @@ export default function ContactSection() {
               </h3>
 
 
-              <p className="text-gray-400 mt-3 break-all">
+              <p className="text-gray-600 mt-3 break-all">
 
-                merkeldevelopment@gmail.com
+                info@merkeldevelopment.com
 
               </p>
 
 
             </div>
-
 
 
           </div>
@@ -406,8 +406,7 @@ export default function ContactSection() {
               </h3>
 
 
-
-              <p className="text-gray-400 mt-3">
+              <p className="text-gray-600 mt-3">
 
                 (602) 555-1234
 
@@ -426,11 +425,10 @@ export default function ContactSection() {
 
 
 
-
           <div
             className="
             border-t
-            border-white/10
+            border-black/10
 
             pt-10
 
@@ -442,21 +440,16 @@ export default function ContactSection() {
             "
           >
 
-
             "Every home we build is a promise kept."
 
-
           </div>
-
 
 
 
         </div>
 
 
-
       </div>
-
 
 
     </section>

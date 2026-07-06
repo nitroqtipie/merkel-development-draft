@@ -8,11 +8,12 @@ export default function AboutSection() {
     <section
       id="about"
       className="
-      bg-gradient-to-r
-      from-[#2B2B2B]
-      via-[#111111]
-      to-[#050505]
-      text-white
+      relative
+      overflow-hidden
+
+      bg-[#F9F7F2]
+
+      text-[#111111]
 
       py-20
       md:py-32
@@ -23,8 +24,28 @@ export default function AboutSection() {
     >
 
 
+      {/* GOLD RIGHT FADE */}
       <div
         className="
+        absolute
+        inset-0
+
+        bg-gradient-to-l
+        from-[#C5A059]/30
+        via-[#F9F7F2]/60
+        to-transparent
+
+        pointer-events-none
+        "
+      ></div>
+
+
+
+      <div
+        className="
+        relative
+        z-10
+
         max-w-7xl
         mx-auto
 
@@ -68,11 +89,12 @@ export default function AboutSection() {
             h-full
 
             border
-            border-[#C5A059]/50
+            border-[#C5A059]/60
 
             z-0
             "
           ></div>
+
 
 
 
@@ -105,6 +127,8 @@ export default function AboutSection() {
 
 
 
+
+
         {/* TEXT */}
 
         <motion.div
@@ -116,9 +140,11 @@ export default function AboutSection() {
 
 
 
+
           <p
             className="
             tracking-[0.3em]
+
             text-[#C5A059]
 
             text-xs
@@ -139,6 +165,7 @@ export default function AboutSection() {
 
 
 
+
           <h2
             className="
             font-serif
@@ -152,7 +179,6 @@ export default function AboutSection() {
             md:mb-10
             "
           >
-
 
             Trusted Partnership. <br />
 
@@ -175,8 +201,10 @@ export default function AboutSection() {
 
 
 
-          <p className="text-gray-300 leading-8 mb-8">
 
+
+
+          <p className="text-gray-600 leading-8 mb-8">
 
             Merkel Development is a luxury residential development firm led by an owner
             with over four decades of experience in real estate and construction.
@@ -184,36 +212,32 @@ export default function AboutSection() {
             and Phoenix, Arizona, creating thoughtfully designed residences that reflect
             the vision, lifestyle, and values of our clients.
 
-
           </p>
 
 
 
 
 
-          <p className="text-gray-300 leading-8 mb-8">
-
+          <p className="text-gray-600 leading-8 mb-8">
 
             Our approach is built on collaboration. When a project requires it, we
             coordinate with architects, engineers, interior designers, and specialized
             trades to support design intent and delivery of each project.
 
-
           </p>
 
 
 
 
 
-          <p className="text-gray-300 leading-8">
-
+          <p className="text-gray-600 leading-8">
 
             Each project is managed with hands-on involvement from conception through
             completion, with a focus on precision, craftsmanship, and integrity
             throughout the construction process.
 
-
           </p>
+
 
 
 
@@ -230,11 +254,13 @@ export default function AboutSection() {
             md:mt-14
 
             border-t
-            border-white/20
+            border-black/10
 
             pt-8
             "
           >
+
+
 
 
 
@@ -258,11 +284,16 @@ export default function AboutSection() {
 
 
 
+
+
             <p
               className="
               text-xs
+
               tracking-widest
-              text-gray-400
+
+              text-gray-500
+
               leading-6
               "
             >

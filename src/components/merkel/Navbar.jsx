@@ -38,7 +38,7 @@ export default function Navbar() {
     { name: "ABOUT", id: "about" },
     { name: "SERVICES", id: "services" },
     { name: "INVESTMENT", id: "investment" },
-    { name: "PROCESS", id: "process" },
+    { name: "PORTFOLIO", id: "process" },
     { name: "CONTACT", id: "contact" },
 
   ];
@@ -56,7 +56,6 @@ export default function Navbar() {
       left-0
 
       w-full
-
       z-50
 
       transition-all
@@ -65,12 +64,13 @@ export default function Navbar() {
 
       ${
         scrolled || open
-        ? "bg-[#080808]/95 backdrop-blur border-b border-white/10"
+        ? "bg-[#151515]/95 backdrop-blur border-b border-white/10"
         : "bg-transparent"
       }
 
       `}
     >
+
 
 
       <div
@@ -81,14 +81,14 @@ export default function Navbar() {
         px-6
         md:px-8
 
-        py-4
+        py-1
 
         flex
-
         justify-between
         items-center
         "
       >
+
 
 
 
@@ -102,8 +102,6 @@ export default function Navbar() {
           className="
           flex
           items-center
-
-          gap-3
           "
         >
 
@@ -114,33 +112,13 @@ export default function Navbar() {
             alt="Merkel Development Logo"
 
             className="
-            h-8
-            md:h-9
+            h-12
+            md:h-14
 
             w-auto
             object-contain
             "
           />
-
-
-
-          <span
-            className="
-            font-serif
-
-            text-xl
-            md:text-2xl
-
-            tracking-widest
-
-            text-white
-            "
-          >
-
-            MERKEL
-
-          </span>
-
 
 
         </a>
@@ -168,6 +146,7 @@ export default function Navbar() {
 
               className="
               text-xs
+
               font-semibold
 
               tracking-[0.18em]
@@ -198,7 +177,6 @@ export default function Navbar() {
 
 
 
-
         {/* MOBILE BUTTON */}
 
         <button
@@ -211,7 +189,7 @@ export default function Navbar() {
         >
 
 
-          {open ? <X size={28}/> : <Menu size={28}/>}
+          {open ? <X size={26}/> : <Menu size={26}/>}
 
 
         </button>
@@ -231,6 +209,7 @@ export default function Navbar() {
 
 
 
+
       {/* MOBILE MENU */}
 
       {open && (
@@ -239,11 +218,10 @@ export default function Navbar() {
           className="
           md:hidden
 
-          bg-[#080808]/95
+          bg-[#151515]/95
 
           px-6
-
-          pb-8
+          py-6
 
           space-y-6
           "
@@ -276,9 +254,7 @@ export default function Navbar() {
               "
             >
 
-
               {link.name}
-
 
             </a>
 

@@ -1,10 +1,10 @@
 import React from "react";
 
 import process1 from "../../assets/process1.jpg";
-import process2 from "../../assets/process2.jpg";
+import process2 from "../../assets/process2.png";
 import process3 from "../../assets/process3.png";
-import process4 from "../../assets/process4.jpg";
-import process5 from "../../assets/process5.jpg";
+import process4 from "../../assets/process4.png";
+import process5 from "../../assets/process5.png";
 
 
 export default function ProcessSection() {
@@ -13,47 +13,47 @@ export default function ProcessSection() {
   const steps = [
 
     {
-      phase: "PHASE 01",
+      phase: "01",
       image: process1,
       title: "Planning",
       text:
-        "Every exceptional home begins with meticulous planning — feasibility studies, architectural vision, and strategic coordination before ground is ever broken."
+        "Every project begins with feasibility, design coordination, and structured planning to ensure disciplined execution from inception."
     },
 
 
     {
-      phase: "PHASE 02",
+      phase: "02",
       image: process2,
       title: "Foundation",
       text:
-        "Precision-engineered foundations set the standard. Structural integrity is non-negotiable — it’s the bedrock of every Merkel home."
+        "Precision-engineered foundations establish structural integrity and long-term performance."
     },
 
 
     {
-      phase: "PHASE 03",
+      phase: "03",
       image: process3,
       title: "Framing",
       text:
-        "Architectural framing reveals the geometry of the home. Clean lines, structural connections, and the skeleton of something extraordinary."
+        "Structural systems define scale, proportion, and architectural clarity."
     },
 
 
     {
-      phase: "PHASE 04",
+      phase: "04",
       image: process4,
       title: "Craftsmanship",
       text:
-        "Premium materials meet skilled hands. Hand-troweled plaster, reclaimed hardwoods, and custom millwork define our attention to detail."
+        "Premium materials and detailed execution bring design intent into physical form."
     },
 
 
     {
-      phase: "PHASE 05",
+      phase: "05",
       image: process5,
       title: "Completion",
       text:
-        "The final vision realized — a luxury residence that stands as a testament to purpose, patience, and uncompromising quality."
+        "A fully realized residential asset delivered with focus on quality, longevity, and market positioning."
     },
 
   ];
@@ -65,7 +65,7 @@ export default function ProcessSection() {
     <section
       id="process"
       className="
-      bg-[#080808]
+      bg-[#161616]
       text-white
 
       px-6
@@ -81,18 +81,15 @@ export default function ProcessSection() {
 
 
 
-
-
         {/* HEADER */}
 
         <div
           className="
-          mb-14
-          md:mb-16
-
-          max-w-3xl
+          mb-16
+          max-w-4xl
           "
         >
+
 
 
           <p
@@ -100,7 +97,6 @@ export default function ProcessSection() {
             text-[#C5A059]
 
             tracking-[0.35em]
-            md:tracking-[0.4em]
 
             text-xs
             md:text-sm
@@ -109,11 +105,9 @@ export default function ProcessSection() {
             "
           >
 
-            — PROCESS
+            — FOUNDER PORTFOLIO
 
           </p>
-
-
 
 
 
@@ -131,9 +125,7 @@ export default function ProcessSection() {
             "
           >
 
-            The Honest Build. <br />
-
-            From Vision to Reality.
+            Founder Portfolio
 
           </h2>
 
@@ -141,21 +133,33 @@ export default function ProcessSection() {
 
 
 
-
-
-          <p
+          <div
             className="
-            text-gray-400
+            space-y-6
+
+            text-gray-300
 
             leading-8
             "
           >
 
-            Every phase of construction will be guided by precision,
-            quality, and an unrelenting commitment to the craft.
-            We believe the process is as important as the result.
 
-          </p>
+            <p>
+              Prior development projects executed through affiliated entities are reviewed during due diligence with qualified investors.
+            </p>
+
+
+            <p>
+              Every phase of construction will be guided by precision, quality, and an unrelenting commitment to the craft. We believe the process is as important as the result.
+            </p>
+
+
+            <p>
+              Carefully curated luxury residential opportunities in established Arcadia locations, guided by the founder’s background in custom home development and executed through Merkel Development’s vertically integrated construction and development platform.
+            </p>
+
+
+          </div>
 
 
         </div>
@@ -168,7 +172,7 @@ export default function ProcessSection() {
 
 
 
-        {/* PROCESS CARDS */}
+        {/* PORTFOLIO CARDS */}
 
         <div
           className="
@@ -184,22 +188,19 @@ export default function ProcessSection() {
 
 
 
-
           {steps.map((item,index)=>(
 
 
             <div key={index}>
 
 
-
               <div className="relative overflow-hidden">
-
 
 
                 <img
                   src={item.image}
 
-                  className="
+                  className={`
                   w-full
 
                   h-[420px]
@@ -207,16 +208,19 @@ export default function ProcessSection() {
 
                   object-cover
 
+                  ${
+                    index === 3
+                    ? "object-[47%_center]"
+                    : "object-center"
+                  }
+
                   hover:scale-105
 
                   transition
 
                   duration-700
-                  "
+                  `}
                 />
-
-
-
 
 
 
@@ -241,9 +245,7 @@ export default function ProcessSection() {
 
 
 
-
               </div>
-
 
 
 
@@ -269,12 +271,11 @@ export default function ProcessSection() {
 
 
 
-
               <p
                 className="
                 mt-5
 
-                text-gray-500
+                text-gray-400
 
                 leading-7
 
@@ -287,13 +288,10 @@ export default function ProcessSection() {
               </p>
 
 
-
-
             </div>
 
 
           ))}
-
 
 
         </div>
@@ -301,7 +299,6 @@ export default function ProcessSection() {
 
 
       </div>
-
 
 
     </section>
