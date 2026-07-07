@@ -11,7 +11,9 @@ export default function Navbar() {
   useEffect(() => {
 
     const handleScroll = () => {
+
       setScrolled(window.scrollY > 80);
+
     };
 
 
@@ -21,8 +23,8 @@ export default function Navbar() {
     return () =>
       window.removeEventListener("scroll", handleScroll);
 
-  }, []);
 
+  }, []);
 
 
 
@@ -36,7 +38,6 @@ export default function Navbar() {
     { name: "CONTACT", id: "contact" },
 
   ];
-
 
 
 
@@ -67,7 +68,6 @@ export default function Navbar() {
     >
 
 
-
       <div
         className="
         relative
@@ -90,8 +90,6 @@ export default function Navbar() {
 
 
 
-
-
         {/* LOGO */}
 
         <a
@@ -105,7 +103,7 @@ export default function Navbar() {
 
           top-1/2
 
-          -translate-y-[42%]
+          -translate-y-[35%]
 
           flex
           items-center
@@ -119,8 +117,8 @@ export default function Navbar() {
             alt="Merkel Development Logo"
 
             className="
-            h-20
-            md:h-24
+            h-24
+            md:h-28
 
             w-auto
 
@@ -137,13 +135,7 @@ export default function Navbar() {
 
 
 
-
-
-
-
         <div></div>
-
-
 
 
 
@@ -168,7 +160,6 @@ export default function Navbar() {
 
           {links.map((link)=>(
 
-
             <a
 
               key={link.id}
@@ -190,15 +181,11 @@ export default function Navbar() {
               "
             >
 
-
               {link.name}
-
 
             </a>
 
-
           ))}
-
 
 
         </div>
@@ -209,9 +196,7 @@ export default function Navbar() {
 
 
 
-
-
-        {/* MOBILE */}
+        {/* MOBILE BUTTON */}
 
         <button
           onClick={()=>setOpen(!open)}
@@ -225,9 +210,12 @@ export default function Navbar() {
           "
         >
 
+
           {open ? <X size={28}/> : <Menu size={28}/>}
 
+
         </button>
+
 
 
       </div>
@@ -238,7 +226,7 @@ export default function Navbar() {
 
 
 
-
+      {/* MOBILE MENU */}
 
       {open && (
 
@@ -259,7 +247,6 @@ export default function Navbar() {
 
           {links.map((link)=>(
 
-
             <a
 
               key={link.id}
@@ -276,6 +263,10 @@ export default function Navbar() {
               tracking-widest
 
               text-white
+
+              hover:text-[#C5A059]
+
+              transition
               "
             >
 
@@ -283,14 +274,12 @@ export default function Navbar() {
 
             </a>
 
-
           ))}
 
 
         </div>
 
       )}
-
 
 
     </nav>

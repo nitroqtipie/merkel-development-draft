@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import process1 from "../../assets/process1.jpg";
 import process2 from "../../assets/process2.png";
@@ -13,7 +14,6 @@ export default function ProcessSection() {
   const steps = [
 
     {
-      phase: "01",
       image: process1,
       title: "Planning",
       text:
@@ -22,7 +22,6 @@ export default function ProcessSection() {
 
 
     {
-      phase: "02",
       image: process2,
       title: "Foundation",
       text:
@@ -31,7 +30,6 @@ export default function ProcessSection() {
 
 
     {
-      phase: "03",
       image: process3,
       title: "Framing",
       text:
@@ -40,7 +38,6 @@ export default function ProcessSection() {
 
 
     {
-      phase: "04",
       image: process4,
       title: "Craftsmanship",
       text:
@@ -49,7 +46,6 @@ export default function ProcessSection() {
 
 
     {
-      phase: "05",
       image: process5,
       title: "Completion",
       text:
@@ -60,12 +56,15 @@ export default function ProcessSection() {
 
 
 
+
   return (
 
     <section
       id="process"
+
       className="
-      bg-[#161616]
+      bg-[#252525]
+
       text-white
 
       px-6
@@ -81,11 +80,15 @@ export default function ProcessSection() {
 
 
 
+
+
+
         {/* HEADER */}
 
         <div
           className="
           mb-16
+
           max-w-4xl
           "
         >
@@ -99,7 +102,6 @@ export default function ProcessSection() {
             tracking-[0.35em]
 
             text-xs
-            md:text-sm
 
             mb-6
             "
@@ -108,6 +110,10 @@ export default function ProcessSection() {
             — FOUNDER PORTFOLIO
 
           </p>
+
+
+
+
 
 
 
@@ -133,33 +139,31 @@ export default function ProcessSection() {
 
 
 
-          <div
-            className="
-            space-y-6
-
-            text-gray-300
-
-            leading-8
-            "
-          >
 
 
-            <p>
-              Prior development projects executed through affiliated entities are reviewed during due diligence with qualified investors.
-            </p>
+          <p className="text-gray-400 leading-8 mb-6">
+
+            Prior development projects executed through affiliated entities are reviewed during due diligence with qualified investors.
+
+          </p>
 
 
-            <p>
-              Every phase of construction will be guided by precision, quality, and an unrelenting commitment to the craft. We believe the process is as important as the result.
-            </p>
+
+          <p className="text-gray-400 leading-8 mb-6">
+
+            Every phase of construction will be guided by precision, quality, and an unrelenting commitment to the craft. We believe the process is as important as the result.
+
+          </p>
 
 
-            <p>
-              Carefully curated luxury residential opportunities in established Arcadia locations, guided by the founder’s background in custom home development and executed through Merkel Development’s vertically integrated construction and development platform.
-            </p>
+
+          <p className="text-gray-400 leading-8">
+
+            Carefully curated luxury residential opportunities in established Arcadia locations, guided by the founder’s background in custom home development and executed through Merkel Development’s vertically integrated construction and development platform.
+
+          </p>
 
 
-          </div>
 
 
         </div>
@@ -191,16 +195,38 @@ export default function ProcessSection() {
           {steps.map((item,index)=>(
 
 
-            <div key={index}>
+            <motion.div
+
+              key={index}
+
+              initial={{
+                opacity:0,
+                y:60
+              }}
+
+              whileInView={{
+                opacity:1,
+                y:0
+              }}
+
+              transition={{
+                duration:0.8,
+                delay:index * 0.15
+              }}
+
+            >
 
 
-              <div className="relative overflow-hidden">
+
+
+              <div className="overflow-hidden">
 
 
                 <img
+
                   src={item.image}
 
-                  className={`
+                  className="
                   w-full
 
                   h-[420px]
@@ -208,40 +234,13 @@ export default function ProcessSection() {
 
                   object-cover
 
-                  ${
-                    index === 3
-                    ? "object-[47%_center]"
-                    : "object-center"
-                  }
-
-                  hover:scale-105
+                  hover:scale-110
 
                   transition
 
-                  duration-700
-                  `}
-                />
-
-
-
-                <p
-                  className="
-                  absolute
-
-                  top-5
-                  left-5
-
-                  text-white/60
-
-                  text-xs
-
-                  tracking-widest
+                  duration-1000
                   "
-                >
-
-                  {item.phase}
-
-                </p>
+                />
 
 
 
@@ -252,10 +251,10 @@ export default function ProcessSection() {
 
 
 
+
               <h3
                 className="
-                mt-6
-                md:mt-8
+                mt-8
 
                 font-serif
 
@@ -266,6 +265,8 @@ export default function ProcessSection() {
                 {item.title}
 
               </h3>
+
+
 
 
 
@@ -288,14 +289,15 @@ export default function ProcessSection() {
               </p>
 
 
-            </div>
+
+            </motion.div>
 
 
           ))}
 
 
-        </div>
 
+        </div>
 
 
       </div>

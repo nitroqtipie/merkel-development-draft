@@ -7,29 +7,27 @@ export default function ServicesSection() {
   const services = [
 
     {
-      number: "01",
       title: "Custom Home Construction",
       text:
-        "Luxury residences built with precision, premium materials, and an unwavering attention to detail shaped by the founder’s decades of hands-on construction experience."
+        "Luxury residences guided by decades of hands-on construction experience, with a focus on precision, premium materials, and thoughtful craftsmanship from concept through completion."
     },
 
 
     {
-      number: "02",
       title: "Design + Build & Project Delivery",
       text:
-        "Comprehensive coordination from architectural planning through construction, focused on seamless execution at every stage."
+        "Collaborative project oversight connecting architectural vision, planning, and construction execution to ensure alignment, quality, and attention to detail throughout each phase."
     },
 
 
     {
-      number: "03",
       title: "Pre-Construction & Planning",
       text:
-        "Feasibility analysis, budgeting, scheduling, permitting, and comprehensive development preparation to support successful project execution."
+        "Strategic feasibility analysis, budgeting, scheduling, permitting coordination, and development planning designed to establish a strong foundation for successful projects."
     }
 
   ];
+
 
 
 
@@ -38,6 +36,7 @@ export default function ServicesSection() {
 
     <section
       id="services"
+
       className="
       relative
 
@@ -57,7 +56,9 @@ export default function ServicesSection() {
 
 
 
-      {/* BACKGROUND IMAGE */}
+
+
+      {/* BACKGROUND */}
 
       <div
         className="
@@ -67,10 +68,11 @@ export default function ServicesSection() {
         bg-cover
         bg-center
 
-        opacity-50
+        opacity-45
         "
+
         style={{
-          backgroundImage: `url(${servicesBg})`
+          backgroundImage:`url(${servicesBg})`
         }}
       ></div>
 
@@ -80,7 +82,7 @@ export default function ServicesSection() {
 
 
 
-      {/* SOFTER DARK FADE */}
+      {/* DARK OVERLAY */}
 
       <div
         className="
@@ -89,31 +91,9 @@ export default function ServicesSection() {
 
         bg-gradient-to-r
 
-        from-[#1A1A1A]/85
-        via-[#1A1A1A]/55
-        to-[#1A1A1A]/25
-        "
-      ></div>
-
-
-
-
-
-
-
-
-      {/* SOFT BOTTOM DEPTH */}
-
-      <div
-        className="
-        absolute
-        inset-0
-
-        bg-gradient-to-t
-
-        from-[#151515]/70
-        via-transparent
-        to-transparent
+        from-[#1F2527]/95
+        via-[#1F2527]/80
+        to-[#1F2527]/50
         "
       ></div>
 
@@ -128,7 +108,6 @@ export default function ServicesSection() {
       <div
         className="
         relative
-
         z-10
 
         max-w-7xl
@@ -136,8 +115,6 @@ export default function ServicesSection() {
         mx-auto
         "
       >
-
-
 
 
 
@@ -177,12 +154,11 @@ export default function ServicesSection() {
 
           leading-tight
 
-          mb-14
-          md:mb-20
+          mb-16
           "
         >
 
-          Comprehensive Expertise. <br />
+          Comprehensive Expertise. <br/>
 
 
           <span className="text-[#C5A059]">
@@ -215,36 +191,15 @@ export default function ServicesSection() {
             grid-cols-1
             md:grid-cols-12
 
-            gap-5
+            gap-6
             md:gap-10
 
             border-t
             border-white/20
 
-            py-10
-            md:py-12
+            py-12
             "
           >
-
-
-
-
-
-            <p
-              className="
-              md:col-span-1
-
-              text-[#C5A059]
-
-              font-serif
-
-              text-lg
-              "
-            >
-
-              {item.number}
-
-            </p>
 
 
 
@@ -259,7 +214,7 @@ export default function ServicesSection() {
 
               font-serif
 
-              text-2xl
+              text-3xl
               "
             >
 
@@ -277,11 +232,11 @@ export default function ServicesSection() {
 
             <p
               className="
-              md:col-span-6
+              md:col-span-7
 
-              text-gray-200
+              text-gray-300
 
-              leading-7
+              leading-8
               "
             >
 
@@ -300,7 +255,6 @@ export default function ServicesSection() {
 
 
       </div>
-
 
 
     </section>

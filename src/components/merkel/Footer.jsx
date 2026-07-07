@@ -7,12 +7,10 @@ export default function Footer() {
 
     <footer
       className="
-      relative
-
       bg-gradient-to-b
-      from-[#B8AF9E]
-      via-[#4A4944]
-      to-[#252525]
+      from-[#B8AE98]
+      via-[#706B5F]
+      to-[#30302C]
 
       text-white
 
@@ -20,9 +18,6 @@ export default function Footer() {
       md:px-8
 
       py-10
-      md:py-12
-
-      overflow-hidden
       "
     >
 
@@ -37,12 +32,13 @@ export default function Footer() {
           grid-cols-1
           md:grid-cols-3
 
-          gap-10
-          md:gap-16
+          gap-14
 
-          mb-10
+          mb-8
           "
         >
+
+
 
 
 
@@ -54,36 +50,23 @@ export default function Footer() {
 
 
 
-            {/* FOOTER LOGO */}
+            <img
 
-            <div
+              src={footerLogo}
+
+              alt="Merkel Development Logo"
+
               className="
-              flex
-              items-center
+              h-52
+              md:h-64
+
+              w-auto
+
+              object-contain
 
               mb-2
               "
-            >
-
-
-              <img
-                src={footerLogo}
-
-                alt="Merkel Development Logo"
-
-                className="
-                h-28
-                md:h-36
-
-                w-auto
-
-                object-contain
-                "
-              />
-
-
-            </div>
-
+            />
 
 
 
@@ -93,11 +76,11 @@ export default function Footer() {
 
             <p
               className="
-              text-gray-100
+              text-[#FFF9EE]
 
-              leading-7
+              leading-8
 
-              max-w-sm
+              max-w-md
               "
             >
 
@@ -108,7 +91,31 @@ export default function Footer() {
 
 
 
+
+
+
+            <p
+              className="
+              text-[#F4C96A]
+
+              mt-5
+
+              tracking-widest
+
+              text-sm
+              "
+            >
+
+              ROC #364263
+
+            </p>
+
+
+
+
           </div>
+
+
 
 
 
@@ -128,13 +135,13 @@ export default function Footer() {
 
             <p
               className="
-              text-[#D6B25E]
+              text-[#F4C96A]
 
               tracking-widest
 
               text-sm
 
-              mb-5
+              mb-6
               "
             >
 
@@ -149,39 +156,34 @@ export default function Footer() {
 
             <div
               className="
-              space-y-3
+              space-y-5
 
-              text-gray-100
+              text-[#FFF9EE]
               "
             >
 
 
-
-              <a href="#about" className="block hover:text-[#D6B25E] transition">
+              <a href="#about" className="block hover:text-[#F4C96A] transition">
                 About
               </a>
 
 
-
-              <a href="#services" className="block hover:text-[#D6B25E] transition">
+              <a href="#services" className="block hover:text-[#F4C96A] transition">
                 Services
               </a>
 
 
-
-              <a href="#investment" className="block hover:text-[#D6B25E] transition">
+              <a href="#investment" className="block hover:text-[#F4C96A] transition">
                 Investment
               </a>
 
 
-
-              <a href="#process" className="block hover:text-[#D6B25E] transition">
+              <a href="#process" className="block hover:text-[#F4C96A] transition">
                 Portfolio
               </a>
 
 
-
-              <a href="#contact" className="block hover:text-[#D6B25E] transition">
+              <a href="#contact" className="block hover:text-[#F4C96A] transition">
                 Contact
               </a>
 
@@ -204,6 +206,9 @@ export default function Footer() {
 
 
 
+
+
+
           {/* CONTACT */}
 
           <div>
@@ -211,13 +216,13 @@ export default function Footer() {
 
             <p
               className="
-              text-[#D6B25E]
+              text-[#F4C96A]
 
               tracking-widest
 
               text-sm
 
-              mb-5
+              mb-6
               "
             >
 
@@ -230,28 +235,28 @@ export default function Footer() {
 
 
 
+
             <div
               className="
-              space-y-3
+              space-y-5
 
-              text-gray-100
+              text-[#FFF9EE]
               "
             >
 
 
-
               <p>
-
                 Arcadia • Phoenix, Arizona
-
               </p>
 
 
-
               <p className="break-all">
-
                 info@merkeldevelopment.com
+              </p>
 
+
+              <p>
+                480-798-8354
               </p>
 
 
@@ -261,6 +266,7 @@ export default function Footer() {
 
 
           </div>
+
 
 
 
@@ -278,16 +284,17 @@ export default function Footer() {
 
 
 
+
         {/* COPYRIGHT */}
 
         <div
           className="
           border-t
-          border-white/15
+          border-white/30
 
           pt-6
 
-          text-gray-300
+          text-[#EDE8DC]
 
           text-sm
 
@@ -299,7 +306,6 @@ export default function Footer() {
           gap-4
           "
         >
-
 
 
           <p>
@@ -323,7 +329,9 @@ export default function Footer() {
 
 
 
+
       </div>
+
 
 
     </footer>

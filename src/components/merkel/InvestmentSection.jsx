@@ -35,7 +35,7 @@ export default function InvestmentSection() {
       icon: Users,
       title: "Experienced Leadership",
       text:
-        "Investment decisions guided by the founder’s three decades of development experience."
+        "Investment decisions guided by the founder’s four decades of development experience."
     },
 
 
@@ -63,8 +63,10 @@ export default function InvestmentSection() {
 
     <section
       id="investment"
+
       className="
       bg-[#F9F7F2]
+
       text-[#0F0F0F]
 
       py-20
@@ -80,18 +82,21 @@ export default function InvestmentSection() {
 
 
 
+
+
+        {/* HEADER */}
+
         <motion.div
+
           initial={{ opacity:0, y:40 }}
+
           whileInView={{ opacity:1, y:0 }}
+
           transition={{ duration:1 }}
 
-          className="
-          max-w-3xl
-
-          mb-16
-          md:mb-20
-          "
+          className="max-w-3xl mb-20"
         >
+
 
 
 
@@ -99,19 +104,19 @@ export default function InvestmentSection() {
           <p
             className="
             tracking-[0.3em]
+
             text-[#C5A059]
 
-            text-xs
-            md:text-sm
+            text-sm
 
-            mb-6
-            md:mb-8
+            mb-8
             "
           >
 
             — INVESTMENT
 
           </p>
+
 
 
 
@@ -127,8 +132,7 @@ export default function InvestmentSection() {
 
             leading-tight
 
-            mb-8
-            md:mb-10
+            mb-10
             "
           >
 
@@ -149,12 +153,13 @@ export default function InvestmentSection() {
 
 
 
+
+
           <p
             className="
             text-gray-600
 
-            text-base
-            md:text-lg
+            text-lg
 
             leading-8
             "
@@ -168,7 +173,6 @@ export default function InvestmentSection() {
 
 
 
-
         </motion.div>
 
 
@@ -179,6 +183,8 @@ export default function InvestmentSection() {
 
 
 
+        {/* CONTENT */}
+
         <div
           className="
           grid
@@ -186,7 +192,7 @@ export default function InvestmentSection() {
           grid-cols-1
           md:grid-cols-2
 
-          gap-14
+          gap-16
           md:gap-20
 
           items-start
@@ -196,13 +202,15 @@ export default function InvestmentSection() {
 
 
 
+
           <img
+
             src={investment}
 
             className="
             w-full
 
-            h-[420px]
+            h-[450px]
             md:h-[700px]
 
             object-cover
@@ -215,10 +223,9 @@ export default function InvestmentSection() {
 
 
 
+
+
           <div>
-
-
-
 
 
             <div
@@ -236,12 +243,10 @@ export default function InvestmentSection() {
 
 
 
-
-              {items.map((item)=> {
+              {items.map((item)=>{
 
 
                 const Icon = item.icon;
-
 
 
                 return (
@@ -249,10 +254,18 @@ export default function InvestmentSection() {
                   <div key={item.title}>
 
 
+
                     <Icon
+
                       size={24}
-                      className="text-[#C5A059] mb-6"
+
+                      className="
+                      text-[#C5A059]
+
+                      mb-6
+                      "
                     />
+
 
 
 
@@ -274,6 +287,7 @@ export default function InvestmentSection() {
 
 
 
+
                     <p
                       className="
                       text-gray-600
@@ -288,15 +302,11 @@ export default function InvestmentSection() {
 
 
 
-
                   </div>
-
 
                 );
 
-
               })}
-
 
 
 
@@ -310,27 +320,20 @@ export default function InvestmentSection() {
 
 
 
-
             <a
+
               href="#contact"
 
               className="
               inline-block
 
-              mt-16
-              md:mt-20
+              mt-20
 
               bg-[#080808]
 
               text-white
 
-              w-full
-              md:w-auto
-
-              text-center
-
-              px-8
-              md:px-12
+              px-12
 
               py-5
 
@@ -350,7 +353,6 @@ export default function InvestmentSection() {
               DISCUSS INVESTMENT OPPORTUNITIES
 
             </a>
-
 
 
 

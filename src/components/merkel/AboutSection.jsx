@@ -1,15 +1,16 @@
+import founder from "../../assets/founder.png";
 import about from "../../assets/about.png";
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function AboutSection() {
+
   return (
 
     <section
       id="about"
       className="
       relative
-      overflow-hidden
 
       bg-[#F9F7F2]
 
@@ -20,31 +21,38 @@ export default function AboutSection() {
 
       px-6
       md:px-8
+
+      overflow-hidden
       "
     >
 
 
-      {/* GOLD RIGHT FADE */}
+
+      {/* GOLD FADE */}
+
       <div
         className="
         absolute
-        inset-0
+        right-0
+        top-0
+
+        w-1/2
+        h-full
 
         bg-gradient-to-l
-        from-[#C5A059]/30
-        via-[#F9F7F2]/60
+        from-[#C5A059]/20
         to-transparent
-
-        pointer-events-none
         "
       ></div>
+
+
+
 
 
 
       <div
         className="
         relative
-        z-10
 
         max-w-7xl
         mx-auto
@@ -62,59 +70,76 @@ export default function AboutSection() {
 
 
 
-        {/* IMAGE */}
+
+
+
+
+        {/* FOUNDER IMAGE */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative"
+
+          initial={{ opacity:0, y:40 }}
+
+          whileInView={{ opacity:1, y:0 }}
+
+          transition={{duration:1}}
+
+          className="
+          relative
+          "
         >
 
 
 
-          {/* GOLD FRAME */}
-
-          <div
-            className="
-            absolute
-
-            -bottom-3
-            md:-bottom-5
-
-            -right-3
-            md:-right-5
-
-            w-full
-            h-full
-
-            border
-            border-[#C5A059]/60
-
-            z-0
-            "
-          ></div>
-
-
-
-
-
           <img
-            src={about}
+            src={founder}
+
             className="
             relative
+
             z-10
 
-            w-full
+            w-[85%]
 
-            h-[420px]
-            md:h-[650px]
+            h-[520px]
 
             object-cover
 
             shadow-2xl
             "
           />
+
+
+
+
+
+
+          {/* OLD ABOUT IMAGE */}
+
+          <img
+            src={about}
+
+            className="
+            absolute
+
+            right-0
+            -bottom-10
+
+            w-[45%]
+
+            h-[220px]
+
+            object-cover
+
+            shadow-xl
+
+            border-4
+            border-[#F9F7F2]
+
+            z-20
+            "
+          />
+
 
 
         </motion.div>
@@ -128,16 +153,17 @@ export default function AboutSection() {
 
 
 
-
         {/* TEXT */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+
+          initial={{ opacity:0, y:40 }}
+
+          whileInView={{ opacity:1, y:0}}
+
+          transition={{duration:1}}
+
         >
-
-
 
 
 
@@ -150,8 +176,7 @@ export default function AboutSection() {
             text-xs
             md:text-sm
 
-            mb-6
-            md:mb-8
+            mb-8
             "
           >
 
@@ -175,14 +200,13 @@ export default function AboutSection() {
 
             leading-tight
 
-            mb-8
-            md:mb-10
+            mb-10
             "
           >
 
-            Trusted Partnership. <br />
+            Trusted Partnership. <br/>
 
-            Luxury Crafted. <br />
+            Luxury Crafted. <br/>
 
 
             <span className="text-[#C5A059]">
@@ -192,10 +216,8 @@ export default function AboutSection() {
             </span>
 
 
+
           </h2>
-
-
-
 
 
 
@@ -218,6 +240,7 @@ export default function AboutSection() {
 
 
 
+
           <p className="text-gray-600 leading-8 mb-8">
 
             Our approach is built on collaboration. When a project requires it, we
@@ -225,6 +248,8 @@ export default function AboutSection() {
             trades to support design intent and delivery of each project.
 
           </p>
+
+
 
 
 
@@ -243,71 +268,8 @@ export default function AboutSection() {
 
 
 
-
-
-
-
-
-          <div
-            className="
-            mt-12
-            md:mt-14
-
-            border-t
-            border-black/10
-
-            pt-8
-            "
-          >
-
-
-
-
-
-            <h3
-              className="
-              text-[#C5A059]
-
-              text-2xl
-              md:text-3xl
-
-              font-serif
-
-              mb-4
-              "
-            >
-
-              40+ YEARS
-
-            </h3>
-
-
-
-
-
-
-            <p
-              className="
-              text-xs
-
-              tracking-widest
-
-              text-gray-500
-
-              leading-6
-              "
-            >
-
-              LED BY AN OWNER WITH MORE THAN 40 YEARS OF CONSTRUCTION EXPERIENCE.
-
-            </p>
-
-
-          </div>
-
-
-
         </motion.div>
+
 
 
       </div>
@@ -316,4 +278,5 @@ export default function AboutSection() {
     </section>
 
   );
+
 }

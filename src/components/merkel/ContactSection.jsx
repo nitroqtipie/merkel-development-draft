@@ -7,11 +7,10 @@ export default function ContactSection() {
 
     <section
       id="contact"
-      className="
-      relative
-      overflow-hidden
 
+      className="
       bg-[#F9F7F2]
+
       text-[#111111]
 
       py-20
@@ -22,28 +21,9 @@ export default function ContactSection() {
     >
 
 
-      {/* GOLD RIGHT FADE */}
-      <div
-        className="
-        absolute
-        inset-0
-
-        bg-gradient-to-l
-        from-[#C5A059]/25
-        via-[#F9F7F2]/60
-        to-transparent
-
-        pointer-events-none
-        "
-      ></div>
-
-
 
       <div
         className="
-        relative
-        z-10
-
         max-w-6xl
         mx-auto
 
@@ -57,16 +37,23 @@ export default function ContactSection() {
 
 
 
+
+
+
         {/* LEFT */}
 
         <div>
 
 
+
           <p
             className="
             tracking-[0.3em]
+
             text-[#C5A059]
+
             text-xs
+
             mb-6
             "
           >
@@ -74,6 +61,11 @@ export default function ContactSection() {
             — CONNECT
 
           </p>
+
+
+
+
+
 
 
 
@@ -90,7 +82,8 @@ export default function ContactSection() {
             "
           >
 
-            Build With <br />
+            Partner With <br />
+
 
             <span className="text-[#C5A059]">
 
@@ -98,7 +91,11 @@ export default function ContactSection() {
 
             </span>
 
+
           </h2>
+
+
+
 
 
 
@@ -107,6 +104,7 @@ export default function ContactSection() {
           <p
             className="
             text-gray-600
+
             leading-7
 
             mb-12
@@ -126,6 +124,10 @@ export default function ContactSection() {
 
 
 
+
+
+
+
           <form className="space-y-7">
 
 
@@ -133,6 +135,7 @@ export default function ContactSection() {
             <div
               className="
               grid
+
               grid-cols-1
               md:grid-cols-2
 
@@ -141,9 +144,13 @@ export default function ContactSection() {
             >
 
 
+
               <input
+
                 required
+
                 placeholder="NAME"
+
                 className="
                 bg-transparent
 
@@ -157,12 +164,16 @@ export default function ContactSection() {
                 text-sm
                 "
               />
+
 
 
 
               <input
+
                 required
+
                 placeholder="EMAIL"
+
                 className="
                 bg-transparent
 
@@ -176,6 +187,7 @@ export default function ContactSection() {
                 text-sm
                 "
               />
+
 
 
             </div>
@@ -184,8 +196,13 @@ export default function ContactSection() {
 
 
 
+
+
+
             <input
+
               required
+
               placeholder="PHONE"
 
               className="
@@ -209,8 +226,13 @@ export default function ContactSection() {
 
 
 
+
+
+
             <textarea
+
               required
+
               placeholder="MESSAGE"
 
               rows="3"
@@ -237,52 +259,34 @@ export default function ContactSection() {
 
 
 
+
+
             <button
-              type="submit"
-
-              onClick={(e)=>{
-
-                const form = e.currentTarget.form;
-
-                if(form.checkValidity()){
-
-                  e.preventDefault();
-
-                  alert("Message sent successfully.");
-
-                  form.reset();
-
-                }
-
-              }}
 
               className="
               bg-[#C5A059]
 
               text-black
 
-              w-full
-              md:w-auto
-
               px-10
+
               py-4
 
               tracking-widest
 
               text-xs
 
-              hover:bg-[#111111]
+              hover:bg-black
               hover:text-white
 
               transition
               "
             >
 
-
               SEND MESSAGE →
 
-
             </button>
+
 
 
 
@@ -300,10 +304,7 @@ export default function ContactSection() {
 
 
 
-
-
-        {/* RIGHT */}
-
+        {/* RIGHT CONTACT INFO */}
 
         <div
           className="
@@ -320,18 +321,17 @@ export default function ContactSection() {
 
 
 
+
+
           <div className="flex gap-6">
 
-
-            <MapPin className="text-[#C5A059] shrink-0" />
+            <MapPin className="text-[#C5A059]" />
 
 
             <div>
 
-              <h3 className="text-sm tracking-widest">
-
+              <h3 className="tracking-widest text-sm">
                 LOCATION
-
               </h3>
 
 
@@ -354,23 +354,25 @@ export default function ContactSection() {
 
 
 
+
           <div className="flex gap-6">
 
 
-            <Mail className="text-[#C5A059] shrink-0" />
+            <Mail className="text-[#C5A059]" />
 
 
             <div>
 
 
-              <h3 className="text-sm tracking-widest">
+              <h3 className="tracking-widest text-sm">
 
                 EMAIL
 
               </h3>
 
 
-              <p className="text-gray-600 mt-3 break-all">
+
+              <p className="text-gray-600 mt-3">
 
                 info@merkeldevelopment.com
 
@@ -390,25 +392,27 @@ export default function ContactSection() {
 
 
 
+
           <div className="flex gap-6">
 
 
-            <Phone className="text-[#C5A059] shrink-0" />
+            <Phone className="text-[#C5A059]" />
 
 
             <div>
 
 
-              <h3 className="text-sm tracking-widest">
+              <h3 className="tracking-widest text-sm">
 
                 PHONE
 
               </h3>
 
 
+
               <p className="text-gray-600 mt-3">
 
-                (602) 555-1234
+                480-798-8354
 
               </p>
 
@@ -420,29 +424,6 @@ export default function ContactSection() {
 
 
 
-
-
-
-
-
-          <div
-            className="
-            border-t
-            border-black/10
-
-            pt-10
-
-            italic
-
-            text-gray-500
-
-            font-serif
-            "
-          >
-
-            "Every home we build is a promise kept."
-
-          </div>
 
 
 
