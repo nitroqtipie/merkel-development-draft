@@ -1,4 +1,3 @@
-import founder from "../../assets/founder.png";
 import about from "../../assets/about.png";
 import React from "react";
 import { motion } from "framer-motion";
@@ -9,6 +8,7 @@ export default function AboutSection() {
 
     <section
       id="about"
+
       className="
       relative
 
@@ -33,18 +33,15 @@ export default function AboutSection() {
       <div
         className="
         absolute
-        right-0
-        top-0
-
-        w-1/2
-        h-full
+        inset-0
 
         bg-gradient-to-l
+
         from-[#C5A059]/20
+        via-transparent
         to-transparent
         "
-      ></div>
-
+      />
 
 
 
@@ -53,6 +50,7 @@ export default function AboutSection() {
       <div
         className="
         relative
+        z-10
 
         max-w-7xl
         mx-auto
@@ -62,7 +60,6 @@ export default function AboutSection() {
         md:grid-cols-2
 
         gap-16
-        md:gap-20
 
         items-center
         "
@@ -73,72 +70,77 @@ export default function AboutSection() {
 
 
 
-
-        {/* FOUNDER IMAGE */}
+        {/* ABOUT IMAGE */}
 
         <motion.div
 
-          initial={{ opacity:0, y:40 }}
+          initial={{opacity:0, y:40}}
 
-          whileInView={{ opacity:1, y:0 }}
+          whileInView={{opacity:1, y:0}}
 
           transition={{duration:1}}
 
           className="
           relative
+
+          max-w-[500px]
+
+          mx-auto
           "
         >
 
 
 
+
+          {/* GOLD FRAME */}
+
+          <div
+            className="
+            absolute
+
+            -bottom-5
+            -right-5
+
+            w-full
+            h-full
+
+            border
+
+            border-[#C5A059]/60
+
+            z-0
+            "
+          />
+
+
+
+
+
+
+
           <img
-            src={founder}
+
+            src={about}
+
+            alt="Founder Portfolio"
 
             className="
             relative
 
             z-10
 
-            w-[85%]
+            w-full
 
-            h-[520px]
+            h-auto
 
-            object-cover
+            max-h-[850px]
+
+            object-contain
 
             shadow-2xl
             "
           />
 
-
-
-
-
-
-          {/* OLD ABOUT IMAGE */}
-
-          <img
-            src={about}
-
-            className="
-            absolute
-
-            right-0
-            -bottom-10
-
-            w-[45%]
-
-            h-[220px]
-
-            object-cover
-
-            shadow-xl
-
-            border-4
-            border-[#F9F7F2]
-
-            z-20
-            "
-          />
 
 
 
@@ -152,18 +154,21 @@ export default function AboutSection() {
 
 
 
-
         {/* TEXT */}
 
         <motion.div
 
-          initial={{ opacity:0, y:40 }}
+          initial={{opacity:0, y:40}}
 
-          whileInView={{ opacity:1, y:0}}
+          whileInView={{opacity:1, y:0}}
 
           transition={{duration:1}}
 
         >
+
+
+
+
 
 
 
@@ -173,8 +178,7 @@ export default function AboutSection() {
 
             text-[#C5A059]
 
-            text-xs
-            md:text-sm
+            text-sm
 
             mb-8
             "
@@ -183,6 +187,8 @@ export default function AboutSection() {
             — OUR STORY
 
           </p>
+
+
 
 
 
@@ -211,13 +217,13 @@ export default function AboutSection() {
 
             <span className="text-[#C5A059]">
 
-              Timeless Quality.
+            Timeless Quality.
 
             </span>
 
 
-
           </h2>
+
 
 
 
@@ -230,11 +236,10 @@ export default function AboutSection() {
 
             Merkel Development is a luxury residential development firm led by an owner
             with over four decades of experience in real estate and construction.
-            We specialize in the planning and development of custom homes in Arcadia
-            and Phoenix, Arizona, creating thoughtfully designed residences that reflect
-            the vision, lifestyle, and values of our clients.
 
           </p>
+
+
 
 
 
@@ -243,11 +248,12 @@ export default function AboutSection() {
 
           <p className="text-gray-600 leading-8 mb-8">
 
-            Our approach is built on collaboration. When a project requires it, we
-            coordinate with architects, engineers, interior designers, and specialized
-            trades to support design intent and delivery of each project.
+            We specialize in planning and developing custom homes throughout
+            Arcadia and Phoenix, Arizona, with a commitment to craftsmanship,
+            integrity, and long-term quality.
 
           </p>
+
 
 
 
@@ -257,12 +263,75 @@ export default function AboutSection() {
 
           <p className="text-gray-600 leading-8">
 
-            Each project is managed with hands-on involvement from conception through
-            completion, with a focus on precision, craftsmanship, and integrity
-            throughout the construction process.
+            Each project is guided through hands-on leadership, careful coordination,
+            and attention to detail from concept through completion.
 
           </p>
 
+
+
+
+
+
+
+
+
+          <div
+            className="
+            mt-12
+
+            border-t
+            border-black/10
+
+            pt-8
+            "
+          >
+
+
+
+
+
+
+            <h3
+              className="
+              text-[#C5A059]
+
+              text-3xl
+
+              font-serif
+
+              mb-4
+              "
+            >
+
+              40+ YEARS
+
+            </h3>
+
+
+
+
+
+
+
+            <p
+              className="
+              text-gray-500
+
+              text-xs
+
+              tracking-widest
+              "
+            >
+
+              LED BY AN OWNER WITH MORE THAN 40 YEARS OF CONSTRUCTION EXPERIENCE.
+
+            </p>
+
+
+
+
+          </div>
 
 
 

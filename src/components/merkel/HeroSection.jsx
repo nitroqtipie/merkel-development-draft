@@ -1,6 +1,7 @@
-import hero from "../../assets/hero.png";
+import heroVideo from "../../assets/hero.mp4";
 
 export default function HeroSection() {
+
   return (
 
     <section
@@ -15,20 +16,46 @@ export default function HeroSection() {
       px-6
       md:px-20
 
-      bg-cover
-      bg-center
-
       overflow-hidden
       "
-      style={{
-        backgroundImage: `url(${hero})`
-      }}
     >
 
 
 
+      {/* VIDEO BACKGROUND */}
 
-      {/* LEFT TO RIGHT GRADIENT */}
+      <video
+
+        autoPlay
+        muted
+        loop
+        playsInline
+
+        className="
+        absolute
+        inset-0
+
+        w-full
+        h-full
+
+        object-cover
+
+        z-0
+        "
+      >
+
+        <source src={heroVideo} type="video/mp4" />
+
+      </video>
+
+
+
+
+
+
+
+
+      {/* DARK CINEMATIC OVERLAY */}
 
       <div
         className="
@@ -38,8 +65,10 @@ export default function HeroSection() {
         bg-gradient-to-r
 
         from-black/90
-        via-black/60
+        via-black/55
         to-black/20
+
+        z-10
         "
       ></div>
 
@@ -48,7 +77,9 @@ export default function HeroSection() {
 
 
 
-      {/* BOTTOM CINEMATIC FADE */}
+
+
+      {/* BOTTOM FADE */}
 
       <div
         className="
@@ -60,6 +91,8 @@ export default function HeroSection() {
         from-black/90
         via-transparent
         to-transparent
+
+        z-10
         "
       ></div>
 
@@ -76,7 +109,8 @@ export default function HeroSection() {
       <div
         className="
         relative
-        z-10
+
+        z-20
 
         max-w-5xl
         "
@@ -85,28 +119,23 @@ export default function HeroSection() {
 
 
 
-
         <p
           className="
           text-champagne
+
           uppercase
 
-          tracking-[4px]
-          md:tracking-[5px]
+          tracking-[5px]
 
-          text-xs
-          md:text-sm
+          text-sm
 
-          mb-6
-          md:mb-8
+          mb-8
           "
         >
 
           Arcadia • Phoenix, Arizona
 
         </p>
-
-
 
 
 
@@ -142,13 +171,11 @@ export default function HeroSection() {
 
 
 
-
         <p
           className="
           mt-8
 
-          text-lg
-          md:text-xl
+          text-xl
 
           italic
 
@@ -167,15 +194,11 @@ export default function HeroSection() {
 
 
 
-
         <p
           className="
           mt-3
 
           tracking-widest
-
-          text-xs
-          md:text-base
 
           text-champagne
           "
@@ -184,9 +207,6 @@ export default function HeroSection() {
           BUILDING HOMES. CREATING WEALTH.
 
         </p>
-
-
-
 
 
 
@@ -215,10 +235,8 @@ export default function HeroSection() {
 
 
 
-
-          {/* PRIMARY INVESTMENT */}
-
           <a
+
             href="#investment"
 
             className="
@@ -227,14 +245,11 @@ export default function HeroSection() {
             text-black
 
             px-10
-            md:px-14
-
             py-4
 
             tracking-widest
 
-            text-xs
-            md:text-sm
+            text-sm
 
             font-semibold
 
@@ -257,26 +272,20 @@ export default function HeroSection() {
 
 
 
-
-
-          {/* SECONDARY CONTACT */}
-
           <a
+
             href="#contact"
 
             className="
             border
             border-white/40
 
-            px-8
-            md:px-10
-
+            px-10
             py-4
 
             tracking-widest
 
-            text-xs
-            md:text-sm
+            text-sm
 
             text-white
 
@@ -291,15 +300,14 @@ export default function HeroSection() {
             "
           >
 
-            BUILD WITH US
+            CONNECT WITH US
 
           </a>
 
 
 
-
-
         </div>
+
 
 
 
@@ -309,4 +317,5 @@ export default function HeroSection() {
     </section>
 
   );
+
 }
