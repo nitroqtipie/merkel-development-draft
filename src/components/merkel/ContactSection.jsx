@@ -1,11 +1,58 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { MapPin, Mail, Phone } from "lucide-react";
 
+
 export default function ContactSection() {
+
+
+  const form = useRef();
+
+
+  const sendEmail = (e) => {
+
+    e.preventDefault();
+
+
+    emailjs.sendForm(
+
+      "service_klmyljd",
+
+      "template_dzk8k4a",
+
+      form.current,
+
+      "_MFYruFOunX5iviUo"
+
+    )
+
+    .then(() => {
+
+      alert("Message sent successfully!");
+
+      form.current.reset();
+
+    })
+
+    .catch((error) => {
+
+      console.log(error);
+
+      alert("Message failed. Please try again.");
+
+    });
+
+
+  };
+
+
+
+
 
   return (
 
     <section
+
       id="contact"
 
       className="
@@ -13,7 +60,7 @@ export default function ContactSection() {
 
       text-[#111111]
 
-      py-20
+      py-24
 
       px-6
       md:px-8
@@ -22,16 +69,22 @@ export default function ContactSection() {
 
 
 
+
       <div
+
         className="
-        max-w-6xl
+        max-w-7xl
+
         mx-auto
 
         grid
-        grid-cols-1
-        md:grid-cols-2
 
-        gap-16
+        grid-cols-1
+        lg:grid-cols-[1.1fr_0.9fr]
+
+        gap-20
+
+        items-start
         "
       >
 
@@ -40,21 +93,23 @@ export default function ContactSection() {
 
 
 
-        {/* LEFT */}
+
+        {/* LEFT SIDE */}
 
         <div>
 
 
 
           <p
-            className="
-            tracking-[0.3em]
 
+            className="
             text-[#C5A059]
+
+            tracking-[0.35em]
 
             text-xs
 
-            mb-6
+            mb-8
             "
           >
 
@@ -67,23 +122,22 @@ export default function ContactSection() {
 
 
 
-
-
           <h2
+
             className="
             font-serif
 
-            text-4xl
-            md:text-5xl
+            text-5xl
+            md:text-6xl
 
             leading-tight
 
-            mb-8
+            mb-10
             "
           >
 
-            Partner With <br />
 
+            Partner With <br />
 
             <span className="text-[#C5A059]">
 
@@ -99,23 +153,24 @@ export default function ContactSection() {
 
 
 
-
-
           <p
+
             className="
+            max-w-xl
+
             text-gray-600
 
-            leading-7
+            leading-8
 
-            mb-12
-
-            max-w-xl
+            mb-16
             "
           >
 
-            Whether planning a custom residence, exploring a
-            development opportunity, or considering investment partnerships —
-            connect with our team.
+
+            Whether planning a custom residence, exploring a development
+            opportunity, or considering investment partnerships — connect
+            with our team.
+
 
           </p>
 
@@ -128,26 +183,41 @@ export default function ContactSection() {
 
 
 
-          <form className="space-y-7">
+          {/* FORM */}
+
+
+          <form
+
+            ref={form}
+
+            onSubmit={sendEmail}
+
+            className="space-y-10"
+          >
+
 
 
 
             <div
+
               className="
               grid
 
               grid-cols-1
               md:grid-cols-2
 
-              gap-8
+              gap-10
               "
             >
+
 
 
 
               <input
 
                 required
+
+                name="name"
 
                 placeholder="NAME"
 
@@ -155,15 +225,15 @@ export default function ContactSection() {
                 bg-transparent
 
                 border-b
+
                 border-black/30
 
                 py-3
 
                 outline-none
-
-                text-sm
                 "
               />
+
 
 
 
@@ -172,19 +242,22 @@ export default function ContactSection() {
 
                 required
 
+                name="email"
+
+                type="email"
+
                 placeholder="EMAIL"
 
                 className="
                 bg-transparent
 
                 border-b
+
                 border-black/30
 
                 py-3
 
                 outline-none
-
-                text-sm
                 "
               />
 
@@ -201,7 +274,7 @@ export default function ContactSection() {
 
             <input
 
-              required
+              name="phone"
 
               placeholder="PHONE"
 
@@ -211,16 +284,14 @@ export default function ContactSection() {
               bg-transparent
 
               border-b
+
               border-black/30
 
               py-3
 
               outline-none
-
-              text-sm
               "
             />
-
 
 
 
@@ -233,9 +304,11 @@ export default function ContactSection() {
 
               required
 
+              name="message"
+
               placeholder="MESSAGE"
 
-              rows="3"
+              rows="5"
 
               className="
               w-full
@@ -243,13 +316,14 @@ export default function ContactSection() {
               bg-transparent
 
               border-b
+
               border-black/30
 
               py-3
 
               outline-none
 
-              text-sm
+              resize-none
               "
             />
 
@@ -263,34 +337,37 @@ export default function ContactSection() {
 
             <button
 
+              type="submit"
+
               className="
               bg-[#C5A059]
 
-              text-black
-
-              px-10
+              px-14
 
               py-4
 
+              text-black
+
+              text-sm
+
               tracking-widest
 
-              text-xs
-
-              hover:bg-black
-              hover:text-white
+              hover:bg-[#B98D38]
 
               transition
               "
             >
 
+
               SEND MESSAGE →
+
 
             </button>
 
 
 
-
           </form>
+
 
 
 
@@ -304,16 +381,15 @@ export default function ContactSection() {
 
 
 
-        {/* RIGHT CONTACT INFO */}
+        {/* RIGHT CONTACT DETAILS */}
+
 
         <div
+
           className="
-          flex
-          flex-col
+          pt-32
 
-          justify-center
-
-          space-y-12
+          space-y-14
           "
         >
 
@@ -322,20 +398,40 @@ export default function ContactSection() {
 
 
 
+          <div className="flex gap-8">
 
-          <div className="flex gap-6">
 
-            <MapPin className="text-[#C5A059]" />
+            <MapPin
+
+              className="
+              text-[#C5A059]
+
+              shrink-0
+              "
+            />
+
 
 
             <div>
 
-              <h3 className="tracking-widest text-sm">
+
+              <p
+
+                className="
+                tracking-widest
+
+                text-sm
+
+                mb-4
+                "
+              >
+
                 LOCATION
-              </h3>
+
+              </p>
 
 
-              <p className="text-gray-600 mt-3">
+              <p className="text-gray-600">
 
                 Arcadia • Phoenix, Arizona
 
@@ -355,24 +451,41 @@ export default function ContactSection() {
 
 
 
-          <div className="flex gap-6">
+
+          <div className="flex gap-8">
 
 
-            <Mail className="text-[#C5A059]" />
+            <Mail
+
+              className="
+              text-[#C5A059]
+
+              shrink-0
+              "
+            />
+
 
 
             <div>
 
 
-              <h3 className="tracking-widest text-sm">
+              <p
+
+                className="
+                tracking-widest
+
+                text-sm
+
+                mb-4
+                "
+              >
 
                 EMAIL
 
-              </h3>
+              </p>
 
 
-
-              <p className="text-gray-600 mt-3">
+              <p className="text-gray-600">
 
                 info@merkeldevelopment.com
 
@@ -393,24 +506,40 @@ export default function ContactSection() {
 
 
 
-          <div className="flex gap-6">
+          <div className="flex gap-8">
 
 
-            <Phone className="text-[#C5A059]" />
+            <Phone
+
+              className="
+              text-[#C5A059]
+
+              shrink-0
+              "
+            />
+
 
 
             <div>
 
 
-              <h3 className="tracking-widest text-sm">
+              <p
+
+                className="
+                tracking-widest
+
+                text-sm
+
+                mb-4
+                "
+              >
 
                 PHONE
 
-              </h3>
+              </p>
 
 
-
-              <p className="text-gray-600 mt-3">
+              <p className="text-gray-600">
 
                 480-798-8354
 
@@ -430,7 +559,12 @@ export default function ContactSection() {
         </div>
 
 
+
+
+
       </div>
+
+
 
 
     </section>
