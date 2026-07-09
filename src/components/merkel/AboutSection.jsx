@@ -28,7 +28,7 @@ export default function AboutSection() {
 
 
 
-      {/* GOLD FADE */}
+      {/* SOFT GOLD BACKGROUND */}
 
       <div
         className="
@@ -47,6 +47,8 @@ export default function AboutSection() {
 
 
 
+
+
       <div
         className="
         relative
@@ -60,6 +62,7 @@ export default function AboutSection() {
         md:grid-cols-2
 
         gap-16
+        md:gap-20
 
         items-center
         "
@@ -70,47 +73,25 @@ export default function AboutSection() {
 
 
 
-        {/* ABOUT IMAGE */}
+
+
+        {/* IMAGE */}
 
         <motion.div
 
-          initial={{opacity:0, y:40}}
+          initial={{ opacity:0, y:40 }}
 
-          whileInView={{opacity:1, y:0}}
+          whileInView={{ opacity:1, y:0 }}
 
-          transition={{duration:1}}
+          transition={{ duration:1 }}
 
           className="
-          relative
-
-          max-w-[500px]
+          max-w-[520px]
 
           mx-auto
           "
         >
 
-
-
-
-          {/* GOLD FRAME */}
-
-          <div
-            className="
-            absolute
-
-            -bottom-5
-            -right-5
-
-            w-full
-            h-full
-
-            border
-
-            border-[#C5A059]/60
-
-            z-0
-            "
-          />
 
 
 
@@ -122,13 +103,9 @@ export default function AboutSection() {
 
             src={about}
 
-            alt="Founder Portfolio"
+            alt="Merkel Development Expertise"
 
             className="
-            relative
-
-            z-10
-
             w-full
 
             h-auto
@@ -144,6 +121,10 @@ export default function AboutSection() {
 
 
 
+
+
+
+
         </motion.div>
 
 
@@ -154,15 +135,20 @@ export default function AboutSection() {
 
 
 
-        {/* TEXT */}
+
+
+
+
+
+        {/* CONTENT */}
 
         <motion.div
 
-          initial={{opacity:0, y:40}}
+          initial={{ opacity:0, y:40 }}
 
-          whileInView={{opacity:1, y:0}}
+          whileInView={{ opacity:1, y:0 }}
 
-          transition={{duration:1}}
+          transition={{ duration:1 }}
 
         >
 
@@ -196,7 +182,6 @@ export default function AboutSection() {
 
 
 
-
           <h2
             className="
             font-serif
@@ -210,19 +195,20 @@ export default function AboutSection() {
             "
           >
 
-            Trusted Partnership. <br/>
+            Trusted Partnership. <br />
 
-            Luxury Crafted. <br/>
+            Luxury Crafted. <br />
 
 
             <span className="text-[#C5A059]">
 
-            Timeless Quality.
+              Timeless Quality.
 
             </span>
 
 
           </h2>
+
 
 
 
@@ -246,6 +232,8 @@ export default function AboutSection() {
 
 
 
+
+
           <p className="text-gray-600 leading-8 mb-8">
 
             We specialize in planning and developing custom homes throughout
@@ -253,6 +241,8 @@ export default function AboutSection() {
             integrity, and long-term quality.
 
           </p>
+
+
 
 
 
@@ -292,6 +282,8 @@ export default function AboutSection() {
 
 
 
+
+
             <h3
               className="
               text-[#C5A059]
@@ -307,6 +299,9 @@ export default function AboutSection() {
               40+ YEARS
 
             </h3>
+
+
+
 
 
 
@@ -341,7 +336,10 @@ export default function AboutSection() {
 
 
 
+
       </div>
+
+
 
 
     </section>
